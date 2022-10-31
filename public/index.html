@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="sayhi is group chat school project besed on nodejs and socket io with html,css and javascript">
+    <title>Grop Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="back">
+        <div class="logod">
+            <h3>SAY</h3>
+            <img class="logo" src="hilogo.jpg" alt="">
+            <h3>HI !</h3>
+        </div>
+        <div id="name-container">
+            <p>ONLINE HI !</p>
+            <input id="name" type="text" autocomplete="off" required name="name" value="" placeholder="Enter your name!">
+            <button type="button" name="button" id="chat" onclick="setUserName()">Let me chat!</button>
+        </div>
+    </div>
+    <div class="main hide">
+        <div class="back1 ">
+            <div class="inner-message">
+                <input type="text" autocomplete="off" class="msg-inp" id="message" placeholder="Type message here">
+                <button class="msg-btn" type="button" name="button" onclick="sendMessage()">Send</button>
+            </div>
+            <div id="message-container">
+                <div class="joined"><h4 class="p"></h4><span class="joined" id="newJoin"></span>
+                </div><div id="msg-inner"></div></div>
+        </div>
+    </div>
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script src="/script.js"> </script>
+</body>
+
+</html>
